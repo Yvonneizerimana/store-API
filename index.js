@@ -1,21 +1,31 @@
 import dotenv from "dotenv";
 dotenv.config();
+import mongoose from "mongoose";
 
 //async error
 import express from "express";
 const app=express();
 app.use(express.json());
 
-import notFound from "./middleware/notFound.js";
 import errorHandler from "./middleware/errorHandler.js";
-app.use(notFound);
+import router from "./routes/routes.js";
+import notFound from "./middleware/notFound.js";
+
+app.use(express.json());
+
+//databse connection
+const url=process.env.MONGO_URI || "mongodb://localhost:27017/store"
+mongoose.connect(url)
+.then(()=>{
+
+    //create route
+    app.use("/api/store",router)
+    app.use(notFound);
 app.use(errorHandler);
-
-
-app.get("/home",(req,res)=>{
-    res.send(200).json({message:"Your welcome"});
+})
+.catch((error)=>{
+    console.log(error.message);
 });
-
 
 const PORT=process.env.PORT;
 app.listen(PORT,()=>{

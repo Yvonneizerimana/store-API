@@ -1,0 +1,56 @@
+[
+    {
+        "name":"Juice",
+        "price":2000,
+        "company":"Microsoft",
+        "rating":4
+    },
+    {
+        "name":"wine",
+        "price":1500,
+        "company":"Google",
+        "rating":5
+    },
+    {
+        "name":"makambulu",
+        "price":1700,
+        "company":"Google"
+        
+    },{
+        "name":"ginja",
+        "price":500,
+        "featured":true,
+        "company":"Microsoft"
+        
+    },
+    {
+        "name":"amata",
+        "price":4000,
+        "featured":true,
+        "company":"Microsoft"
+        
+    },
+    {
+        "name":"amata2",
+        "price":8000,
+        "featured":true,
+        "company":"Microsoft"
+        
+    },
+    {
+        "name":"cake",
+        "price":100,
+        "featured":true,
+        "company":"Google"
+        
+    },
+    {
+        "name":"zingalo",
+        "price":700,
+        "featured":true,
+        "company":"Google"
+        
+    }
+
+    
+]
